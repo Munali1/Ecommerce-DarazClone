@@ -1,0 +1,11 @@
+﻿@model List<Category>
+
+<ul class="category-list">
+    @foreach (var cat in Model)
+    {
+        <li class="category-item">
+            <a class="nav-link" href="#">@cat.category_Name</a>
+        </li>
+    }
+</ul>
+

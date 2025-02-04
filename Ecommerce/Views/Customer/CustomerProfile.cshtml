@@ -1,0 +1,46 @@
+﻿@model Ecommerce.Models.Customer
+
+@{
+    ViewData["Title"] = "CustomerProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h4 class="text-center">Customer Profile</h4>
+            <form method="post" enctype="multipart/form-data">
+                <input type="hidden" name="Id" value="@Model?.Id" />
+                <input value="@Model?.Name" type="text" placeholder="Enter Name" name="Name" class="form-control mb-3" />
+                <input value="@Model?.Email" type="Email" placeholder="Enter Email" name="Email" class="form-control mb-3" />
+                <input value="@Model?.Password" type="password" placeholder="Enter Password" name="Password" class="form-control mb-3" />
+                <input value="@Model?.Gender" type="hidden" />
+                <input value="@Model?.Phone" type="text" placeholder="Enter Phone" name="Phone" class="form-control mb-3" />
+                <input value="@Model?.Address" type="text" placeholder="Enter Address" name="Address" class="form-control mb-3" />
+                <input value="@Model?.Country" type="text" placeholder="Enter Country" name="Country" class="form-control mb-3" />
+                <input value="@Model?.City" type="text" placeholder="Enter City" name="City" class="form-control mb-3" />
+                <div class="mb-3">
+                    <label>Current Image</label>
+                    <div>
+                        @if (!string.IsNullOrEmpty(Model?.Image))
+                        {
+                            <img src="@Url.Content("~/customer_image/" + Model.Image)" height="100px" width="100px" />
+                        }
+                        else
+                        {
+                            <p>No image available</p>
+                        }
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label>Upload New Image</label>
+                    <input type="file" name="Image" class="form-control" />
+                    <input type="hidden" name="ExistingImage" value="@Model?.Image" />
+                </div>
+                <input type="submit" value="Update Details" class="btn btn-primary" />
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿@model Admin
+
+<div class="container-fluid px-4">
+    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">Admin Profile</h2>
+</div>
+<div>@ViewData["UpdateMsg"]</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" value="@Model.Id" name="Id" />
+            <input value="@Model.Name" type="text" placeholder="Enter your Name" name="Name" class="form-control my-3" />
+            <input type="email" placeholder="Enter your Email" name="Email" class="form-control my-3" value="@Model.Email" />
+            <input type="password" placeholder="Enter Password" name="Password" class="form-control my-3" value="@Model.Password" />
+            <input type="file" name="Image" class="form-control my-3" />
+            <img src="@Url.Content("~/admin_Img/" + Model.Image)" asp-append-version="true" style="height:100px;width:100px" />
+            <input type="submit" value="Update Profile" class="btn btn-primary" />
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>

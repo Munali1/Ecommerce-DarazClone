@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Cart
+
+<div class="container mt-3">
+    <h2>Checkout</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="form-group">
+                    <label>Product Name:</label>
+                    <input type="text" class="form-control" value="@Model.Products.Name" readonly />
+                </div>
+                <div class="form-group">
+                    <label>Quantity:</label>
+                    <input type="text" class="form-control" value="@Model.Quantity" readonly />
+                </div>
+                <div class="form-group">
+                    <label>Total Price:</label>
+                    <input type="text" class="form-control" value="@Model.Products.Price * @Model.Quantity" readonly />
+                </div>
+                <div class="form-group">
+                    <label>Shipping Address:</label>
+                    <input type="text" class="form-control" name="shippingAddress" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+</div>

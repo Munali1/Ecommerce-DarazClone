@@ -1,0 +1,22 @@
+﻿@model Cart
+
+<div class="container-fluid px-4 mb-3">
+    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">Update Cart</h2>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form method="post">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="hidden" value="@Model.Product_ID" name="Product_ID" />
+            <input type="hidden" value="@Model.Customer_ID" name="Customer_ID" />
+            <input type="hidden" value="@Model.Quantity" name="Quantity" />
+            <select name="status" class="form-control my-3">
+                <option value="0">Pending</option>
+                <option value="1">Order</option>
+            </select>
+            <input type="submit" value="Update Cart" class="btn btn-primary mb-3" />
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>

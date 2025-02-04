@@ -1,0 +1,1123 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins',sans-serif;
+}
+body
+{
+    background-color: #ececec;
+}
+.navigation
+{
+    width: 100%;
+    padding: 5px 0px;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .links
+{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+.navigation .links ul
+{
+    display: flex;
+}
+.navigation .links ul li
+{
+    margin-left: 30px;
+}
+.navigation .links ul li a
+{
+    color: #000;
+    text-transform: uppercase;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+header
+{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo
+{
+    width: 150px;
+    height: 45px;
+    /* border: 1px solid #000; */
+}
+header .logo img
+{
+    width: 90%;
+    height: 90%;
+    /* object-fit: cover; */
+}
+header .searchBar
+{
+    width: 50%;
+    padding: 4px;
+    /* background-color: #999; */
+    padding-left: 50px;
+    display: flex;
+}
+header .searchBar input
+{
+    width: 70%;
+    height: 40px;
+    background-color: #f5f5f5;
+    padding: 10px 30px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0, 5%);
+    outline: none;
+    border: none;
+}
+header .searchBar input::placeholder
+{
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'poppins',sans-serif;
+}
+header .searchBar .searchButton
+{
+    width: 45px;
+    height: 40px;
+    background: #f57224; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .searchBar .searchButton img
+{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    filter: invert(1);
+}
+.breadcrumbs
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}
+.breadcrumbs .breadcrumbsNavigation
+{
+    width: 70%;
+    padding: 2px;
+    /* background-color: #000; */
+}
+.breadcrumbs .breadcrumbsNavigation ul
+{
+    display: flex;
+}
+.breadcrumbs .breadcrumbsNavigation ul span
+{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.breadcrumbs .breadcrumbsNavigation ul li a
+{
+    color: rgb(0, 138, 138);
+}
+.productDetails
+{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productDetails .details
+{
+    width: 70%;
+    background-color: #fff;
+    display: flex;
+}
+.productDetails .details .aboutProduct
+{
+    width: 70%;
+    /* border: 1px solid #000; */
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #000; */
+}
+.productDetails .details .aboutProduct .imgBx
+{
+    width: 300px;
+    height: 450px;
+    /* border: 1px solid #000; */
+}
+.productDetails .details .aboutProduct .imgBx img
+{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.productDetails .details .aboutProduct .imgBx .changeImg
+{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    border-top: 1px solid rgb(197, 197, 197);
+    position: relative;
+}
+.productDetails .details .aboutProduct .imgBx .changeImg .img
+{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid #000; */
+    margin-right: 15px;
+}
+.productDetails .details .aboutProduct .imgBx .changeImg .img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.productDetails .details .aboutProduct .imgBx .changeImg::before
+{
+    content: "<";
+    position: absolute;
+    font-size: 3.5em;
+    color: #999;
+    font-weight: 200;
+    top: -5px;
+    left: -30px;
+}
+.productDetails .details .aboutProduct .imgBx .changeImg::after
+{
+    content: ">";
+    position: absolute;
+    font-size: 3.5em;
+    color: #999;
+    font-weight: 200;
+    top: -5px;
+    right: -30px;
+}
+.productDetails .details .aboutProduct .about
+{
+    width: 60%;
+    padding: 25px 0px;
+}
+.productDetails .details .aboutProduct .about .flashsale
+{
+    width: 500px;
+    height: 35px;
+    position: relative;
+}
+.productDetails .details .aboutProduct .about .flashsale .ending
+{
+    position: absolute;
+    top: 8px;
+    left: 170px;
+}
+.productDetails .details .aboutProduct .about .flashsale .ending h2
+{
+    font-size: 13px;
+    font-weight: 400;
+}
+.productDetails .details .aboutProduct .about .flashsale .ending h2 span
+{
+    color: #ff5e00;
+    font-size: 13px;
+}
+.productDetails .details .aboutProduct .about .flashsale .soldout
+{
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    display: flex;
+    align-items: center;
+}
+.productDetails .details .aboutProduct .about .flashsale .soldout h2
+{
+    font-size: 13px;
+    font-weight: 500;
+}
+.productDetails .details .aboutProduct .about .flashsale .soldout .bar
+{
+    width: 90px;
+    height: 10px;
+    background: linear-gradient(90deg,#ff8763,#ff330c);
+    border-radius: 20px;
+    margin-left: 8px;
+}
+.productDetails .details .aboutProduct .about .flashsale img
+{
+    width: 100%;
+    height: 100%;
+}
+.productDetails .details .aboutProduct .about .title
+{
+    width: 100%;
+    /* border: 1px solid #000; */
+    padding: 10px;
+}
+.productDetails .details .aboutProduct .about .title h2
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+.productDetails .details .aboutProduct .about .rating
+{
+    padding: 5px 10px;
+    /* border: 1px solid #000; */
+}
+.productDetails .details .aboutProduct .about .rating img
+{
+    width: 80px;
+}
+.productDetails .details .aboutProduct .about .rating span
+{
+    color: rgb(0, 147, 192);
+    font-size: 14px;
+    font-weight: 300;
+}
+.productDetails .details .aboutProduct .about .brand
+{
+    padding: 0px 10px;
+    /* border: 1px solid #000; */
+}
+.productDetails .details .aboutProduct .about .brand h2
+{
+    font-size: 15px;
+    color: #777;
+    font-weight: 400;
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 15px;
+
+}
+.productDetails .details .aboutProduct .about .brand h2 span
+{
+    font-size: 13px;
+    color: rgb(0, 147, 192);
+    font-weight: 400;
+}
+.productDetails .details .aboutProduct .about .price
+{
+    padding: 5px 10px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.productDetails .details .aboutProduct .about .price h2
+{
+    font-size: 1.7em;
+    color: #f57224;
+    font-weight: 500;
+}
+.productDetails .details .aboutProduct .about .price span
+{
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.productDetails .details .aboutProduct .about .price span:nth-child(3)
+{
+    text-decoration: none;
+}
+.productDetails .details .aboutProduct .about .color
+{
+    padding: 10px 10px;
+}
+.productDetails .details .aboutProduct .about .color h2
+{
+    font-size: 15px;
+    font-weight: 400;
+    color: #999;
+    text-transform: capitalize;
+}
+.productDetails .details .aboutProduct .about .color h2 span
+{
+    color: #000;
+}
+.productDetails .details .aboutProduct .about .quantity
+{
+    width: 225px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid #000; */
+}
+.productDetails .details .aboutProduct .about .quantity h2
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+}
+.productDetails .details .aboutProduct .about .quantity button
+{
+    border: none;
+    background-color: #eee;
+    padding: 4px 15px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+.productDetails .details .aboutProduct .about .buttons
+{
+    padding: 20px 10px;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.productDetails .details .aboutProduct .about .buttons button
+{
+    width: 49%;
+    padding: 8px 10px;
+    font-size: 1em;
+    background-color: #2abbe8;
+    border: none;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 300;
+    cursor: pointer;
+}
+.productDetails .details .aboutProduct .about .buttons button:nth-child(2)
+{
+    background-color: #f57224;
+}
+.productDetails .details .aboutDelivery 
+{
+    background-color: #f5f5f593;
+    width: 30%;
+}
+.productDetails .details .aboutDelivery .deliveryOption
+{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.productDetails .details .aboutDelivery .deliveryOption h2
+{
+    font-size: 14px;
+    color: #222;
+    font-weight: 400;
+}
+.productDetails .details .aboutDelivery .deliveryOption span
+{
+    font-size: 20px;
+    color: #666;
+}
+.productDetails .details .aboutDelivery .address
+{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.productDetails .details .aboutDelivery .address h2
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+.productDetails .details .aboutDelivery .address h3
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a99c0;
+    text-transform: uppercase;
+}
+.productDetails .details .aboutDelivery .homeDelivery
+{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.productDetails .details .aboutDelivery .homeDelivery h2
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+.productDetails .details .aboutDelivery .homeDelivery h2 span
+{
+    font-size: 13px;
+    font-weight: 300;
+    color: #999;
+}
+.productDetails .details .aboutDelivery .homeDelivery h3
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a99c0;
+    text-transform: uppercase;
+}
+.productDetails .details .aboutDelivery .cod
+{
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.productDetails .details .aboutDelivery .cod h2
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+.productDetails .details .aboutDelivery .warranty
+{
+    padding: 2px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.productDetails .details .aboutDelivery .warranty h2
+{
+    font-size: 14px;
+    color: #222;
+    font-weight: 400;
+}
+.productDetails .details .aboutDelivery .warranty span
+{
+    font-size: 20px;
+    color: #666;
+}
+.productDetails .details .aboutDelivery .return
+{
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.productDetails .details .aboutDelivery .return h2
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+.productDetails .details .aboutDelivery .return h2 span
+{
+    font-size: 13px;
+    font-weight: 300;
+    color: #999;
+}
+.productDetails .details .aboutDelivery .soldBy
+{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.productDetails .details .aboutDelivery .soldBy h2
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #222;
+}
+.productDetails .details .aboutDelivery .soldBy h2 span
+{
+    font-size: 13px;
+}
+.productDetails .details .aboutDelivery .soldBy h3
+{
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a99c0;
+    text-transform: capitalize;
+}
+.productDetails .details .aboutDelivery .review
+{
+    display: flex;
+    /* padding: 5px 10px; */
+}
+.productDetails .details .aboutDelivery .review .sec
+{
+    padding: 5px 10px;
+}
+.productDetails .details .aboutDelivery .review span
+{
+    color: #999;
+    font-size: 15px;
+}
+.productDetails .details .aboutDelivery .review h2
+{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.productDetails .details .aboutDelivery .gotoStore
+{
+    width: 100%;
+    border-top: 1px solid rgba(206, 206, 206, 0.5);
+    /* border-bottom: 1px solid rgb(206, 206, 206); */
+    display: inline-block;
+    padding: 8px 10px;
+    text-align: center;
+    color: #20a3ca;
+    text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+}
+.productDetails .details .aboutDelivery .gotoStore:hover
+{
+    text-decoration: underline;
+}
+.furtherDetails
+{
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.furtherDetails .detailsContent
+{
+    width: 54.5%;
+    
+}
+.furtherDetails .detailsContent .detailsTitle
+{
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+}
+.furtherDetails .detailsContent .detailsTitle h2
+{
+    font-weight: 500;
+    font-size: 16px;
+}
+.furtherDetails .detailsContent .detailList
+{
+    padding: 10px 25px;
+    background-color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.furtherDetails .detailsContent .detailList ul li
+{
+    list-style-type: disc;
+}
+.furtherDetails .detailsContent .detailList ul li h2
+{
+    font-size: 14px;
+    font-weight: 400;
+}
+.furtherDetails .detailsContent .ratings
+{
+    margin-top: 5px;
+    display: flex;
+    background-color: #fff;
+    padding: 40px;
+}
+.furtherDetails .detailsContent .ratings .first
+{
+    /* border: 1px solid #000; */
+    padding: 20px;
+}
+.furtherDetails .detailsContent .ratings .first h2
+{
+    font-size: 2.5em;
+    font-weight: 500;
+}
+.furtherDetails .detailsContent .ratings .first h2 span
+{
+    color: #999;
+    font-size: 25px;
+}
+.furtherDetails .detailsContent .ratings .first img
+{
+    width: 200px;
+    margin: 10px 0px;
+}
+.furtherDetails .detailsContent .ratings .first span
+{
+    color: #666;
+    font-weight: 500;
+    font-size: 15px;
+}
+.furtherDetails .detailsContent .ratings .second
+{
+    /* border: 1px solid #000; */
+    padding: 30px;
+    width: 350px;
+}   
+.furtherDetails .detailsContent .ratings .second .starRating
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.furtherDetails .detailsContent .ratings .second .starRating img
+{
+    width: 140px;
+}
+.furtherDetails .detailsContent .ratings .second .starRating div 
+{
+    width: 100px;
+    height: 14px;
+    /* border: 1px solid red; */
+    position: relative;
+    background-color: #e9e9e9;
+}
+.furtherDetails .detailsContent .ratings .second .starRating div::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color:rgb(255, 217, 0);
+}
+.furtherDetails .detailsContent .productReviews
+{
+    width: 100%;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+.furtherDetails .detailsContent .productReviews h2
+{
+    font-size: 16px;
+    font-weight: 400;
+}
+.furtherDetails .detailsContent .productComments 
+{
+    background-color: #fff;
+    padding: 10px 20px;
+}
+.furtherDetails .detailsContent .productComments .ratingImg 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.furtherDetails .detailsContent .productComments .ratingImg img
+{
+    width: 80px;
+    height: 13px;
+}
+.furtherDetails .detailsContent .productComments .ratingImg h2
+{
+    font-size: 13px;
+    font-weight: 400;
+}
+.furtherDetails .detailsContent .productComments .title
+{
+    display: flex;
+    align-items: center;
+}
+.furtherDetails .detailsContent .productComments .title span:nth-child(1)
+{
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+    margin-right: 5px;
+}
+.furtherDetails .detailsContent .productComments .title img
+{
+    width: 20px;
+}
+.furtherDetails .detailsContent .productComments .title span:nth-child(3)
+{
+    font-size: 16px;
+    color: green;
+    margin-left: 5px;
+}
+.furtherDetails .detailsContent .productComments .comment p
+{
+    margin-top: 10px;
+    font-size: 16px;
+}
+.furtherDetails .detailsContent .productComments .comment .imgBx
+{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.furtherDetails .detailsContent .productComments .comment .imgBx img
+{
+    width: 70px;
+    height: 80px;
+}
+.furtherDetails .sideBar
+{
+    width: 15%;
+    /* padding: 10px; */
+    background-color: #ececec;
+    margin-left: 10px;
+}
+.furtherDetails .sideBar .title
+{
+    text-align: center;
+}
+.furtherDetails .sideBar .title h2
+{
+    font-size: 1em;
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+}
+.furtherDetails .sideBar .productCard
+{
+    width: 100%;
+    /* height: 330px; */
+    background-color: #fff;
+    /* border: 1px solid #000; */
+    padding-bottom: 15px;
+}
+.furtherDetails .sideBar .productCard .imgBx
+{
+    width: 100%;
+    height: 70%;
+}
+.furtherDetails .sideBar .productCard .imgBx img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.furtherDetails .sideBar .productCard .productTitle
+{
+    padding: 6px 10px;
+}
+.furtherDetails .sideBar .productCard .productTitle h3
+{
+    font-weight: 400;
+    font-size: 14px;
+}
+.furtherDetails .sideBar .productCard .productTitle h2
+{
+    color: #f57224;
+    font-weight: 500;
+    margin-top: 6px;
+    font-size: 18px;
+}
+.furtherDetails .sideBar .productCard .productTitle img
+{
+    width: 80px;
+    margin-top: 10px;
+}
+.app
+{
+    width: 100%;
+    height: 46vh;
+    background-color: #2e2e54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app .first
+{
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    /* border: 1px solid #fff; */
+}
+.app .first h2
+{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+.app .first ul
+{
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.app .first ul li
+{
+    margin-bottom: -5px;
+}
+.app .first ul li a
+{
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+}
+.app .first h3
+{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+.app .second
+{
+    width: 200px;
+    height: 100%;
+    padding: 30px;
+    /* border: 1px solid #fff; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.app .second h2
+{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-transform: capitalize;
+}
+.app .second ul
+{
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+.app .second ul li
+{
+    margin-bottom: -5px;
+}
+.app .second ul li a
+{
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+}
+.app .third
+{
+    width: 500px;
+    height: 100%;
+    /* border: 1px solid red; */
+    padding: 20px 40px;
+}
+.app .third .upper
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.app .third .upper .QRimg
+{
+    width: 130px;
+    height: 130px;
+}
+.app .third .upper .QRimg img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.app .third .upper .happyShopping
+{
+    height: 130px;
+    /* border: 1px solid #fff; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.app .third .upper .happyShopping img
+{
+    width: 50px;
+    height: 50px;
+}
+.app .third .upper .happyShopping h2
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ff5e00;
+}
+.app .third .upper .happyShopping h3
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+.app .third .lower
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.app .third .lower button
+{
+    margin-top: 30px;
+    width: 130px;
+    padding: 2px 10px;
+    background-color: #000;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.app .third .lower button .icon
+{
+    width: 30px;
+    height: 30px;
+    /* background-color: #fff; */
+}
+.app .third .lower button .icon img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.app .third .lower button .title span
+{
+    color: #fff;
+    font-size: 8px;
+}
+.app .third .lower button .title h2
+{
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.details
+{
+    width: 100%;
+    /* height: 22vh; */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.details .payment
+{
+    width: 300px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.details .payment h2
+{
+    font-size: 20px;
+    font-weight: 400;
+    color: #222;
+}
+.details .payment .cards
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* border: 1px solid #000; */
+    padding: 2px;
+    margin-top: 8px;
+}
+.details .payment .cards .button 
+{
+    width: 65px;
+    height: 40px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.details .payment .cards .button img
+{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.details .international
+{
+    width: 300px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.details .international h2
+{
+    font-size: 20px;
+    font-weight: 400;
+    color: #222;
+}
+.details .international .country
+{
+    display: flex;
+    justify-content: space-between;
+}
+.details .international .country .countryCard
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* border: 1px solid #000; */
+    margin-top: 10px;
+}
+.details .international .country .countryCard img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.details .follow
+{
+    width: 300px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.details .follow h2
+{
+    font-size: 20px;
+    font-weight: 400;
+    color: #222;
+}
+.details .follow .socialMedia
+{
+    display: flex;
+    justify-content: space-between;
+}
+.details .follow .socialMedia .socialMediaCard
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* border: 1px solid #000; */
+    margin-top: 10px;
+}
+.details .follow .socialMedia .socialMediaCard img
+{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.details .verified
+{
+    width: 300px;
+    height: 100%;
+    /* border: 1px solid #000; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.details .verified h2
+{
+    font-size: 20px;
+    font-weight: 400;
+    color: #222;
+}
+.details .verified img
+{
+    width: 140px;
+    height: 90px;
+}

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Ecommerce.Models.Feedback>
+
+@{
+    ViewData["Title"] = "fetchFeedback";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<h1>Fetch Feedback</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>    
+                    <a class="btn btn-danger" onclick="return confirm('Proceed with deletion?');" href="@Url.Action("DeleteFeedback","Admin",new{id=item.Id})">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<h1 class="alert alert-success"> @TempData["message"]</h1>

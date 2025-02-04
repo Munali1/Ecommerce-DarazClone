@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .sidenav {
+        width: 100%; /* Full width of the container */
+        background-color: #f8f9fa; /* Light background color */
+        border-radius: 5px; /* Rounded corners */
+        padding: 15px; /* Padding inside the sidebar */
+    }
+
+    .sidenav-title {
+        font-size: 18px; /* Increase font size for the title */
+        font-weight: bold; /* Make the title bold */
+        margin-bottom: 15px; /* Space below the title */
+        color: #007bff; /* Text color */
+        text-transform: uppercase; /* Uppercase text */
+    }
+
+    .menu-vertical {
+        list-style-type: none; /* Remove default list bullets */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+
+        .menu-vertical .category-item {
+            margin-bottom: 10px; /* Space between items */
+        }
+
+        .menu-vertical .nav-link {
+            display: block;
+            padding: 10px; /* Padding inside links */
+            text-decoration: none; /* Remove underline from links */
+            background-color: #fff; /* White background color */
+            border-radius: 5px; /* Rounded corners */
+            color: #333; /* Text color */
+            transition: background-color 0.3s ease; /* Smooth background color transition */
+            border: 1px solid #ddd; /* Border around the links */
+        }
+
+            .menu-vertical .nav-link:hover {
+                background-color: #007bff; /* Background color on hover */
+                color: #fff; /* Text color on hover */
+                border-color: #007bff; /* Border color on hover */
+                /* Ensure columns are of equal height using flexbox */
+                .row
+
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+  
+    .nav.sidenav {
+        height: 100%; 
+    }
+    .bannerImg {
+        display: flex;
+        align-items: stretch;
+    }
+
+        .bannerImg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+
+            }
+</style>
+<main class="main">
+    <div class="mb-2"></div>
+</main>
+
+<div class="container">
+    <div class="row align-items-stretch">
+        <!-- Add align-items-stretch for flexbox stretching -->
+        <div class="col-xl-3 d-none d-xl-block">
+            <nav class="sidenav">
+                <div class="sidenav-title">Browse Categories</div>
+                <ul class="menu-vertical">
+                    @Html.Partial("FetchCategoryList", ViewData["category"])
+                </ul>
+            </nav>
+        </div>
+        <div class="col-xl-9">
+            <div class="bannerImg">
+                <img src="~/WebApplication/images/home/banner.jpg" class="img-fluid" alt="Banner Image" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Banner Section End  -->
+<!-- Category Section Start  -->
+<section class="category">
+    <div class="categoryContent">
+        <div class="CategoryCard">
+            <div class="imgBx">
+                <img src="~/WebApplication/images/home/darazMall.gif">
+            </div>
+            <div class="content">
+                <h2>DarazMall</h2>
+            </div>
+        </div>
+        <div class="CategoryCard">
+            <div class="imgBx">
+                <img src="~/WebApplication/images/home/darazMart.gif">
+            </div>
+            <div class="content">
+                <h2>dMart</h2>
+            </div>
+        </div>
+        <div class="CategoryCard">
+            <div class="imgBx">
+                <img src="~/WebApplication/images/home/fashion&beauty.gif">
+            </div>
+            <div class="content">
+                <h2>Fashion & Beauty</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<
+<section class="collection">
+    <h2 class="text-center">More Product</h2>
+    <div class="small"><a href="@Url.Action("ViewProducts","Customer")">View More Products</a></div>
+    @Html.Partial("FetchProducts", ViewData["product"])
+</section>
+<!-- Collection Section End  -->
+<

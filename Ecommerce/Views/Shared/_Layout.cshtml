@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamro Mart</title>
+    <link rel="icon" href="~/1.png">
+    <link rel="stylesheet" href="~/WebApplication/style.css" />
+    <link rel="stylesheet" href="/WebApplication/css/index.css">
+    <link rel="stylesheet" href="/WebApplication/css/fonts.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <header>
+        <style>
+            /* CSS for Header */
+            header {
+                background-color: #131842; /* Background color */
+                padding: 1rem 0;
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2rem;
+            }
+
+            .navbar-container {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+
+            .logo-img {
+                height: 50px; /* Adjust as needed */
+            }
+
+            .search-bar {
+                flex-grow: 1;
+                margin: 0 2rem;
+            }
+
+            .search-form {
+                display: flex;
+                align-items: center;
+            }
+
+            .search-input {
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px 0 0 4px;
+                outline: none;
+            }
+
+            .search-button {
+                padding: 0.5rem;
+                background-color: #E68369; /* Primary color */
+                border: none;
+                border-radius: 0 4px 4px 0;
+                cursor: pointer;
+            }
+
+                .search-button .search-icon {
+                    height: 20px;
+                }
+
+            .nav-links {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .nav-link {
+                color: #FBF6E2; /* Accent color */
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+
+                .nav-link:hover {
+                    background-color: #E68369; /* Primary color */
+                    color: #131842; /* Background color */
+                }
+
+            .nav {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .nav-item {
+                list-style: none;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                background-color: #ECCEAE; /* Secondary color */
+                color: #131842; /* Background color */
+                text-decoration: none;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+
+                .btn:hover {
+                    background-color: #E68369; /* Primary color */
+                    color: #131842; /* Background color */
+                }
+        </style>
+        <nav class="navbar">
+            
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="~/1.png" alt="Hamro Mart Logo" class="logo-img">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <form method="get" asp-action="Search" asp-controller="Customer" class="search-form">
+                        <input type="text" name="query" placeholder="Search in Hamro Mart" class="search-input">
+                        <button type="submit" class="search-button">
+                            <img src="~/WebApplication/images/home/search.png" alt="Search Icon" class="search-icon">
+                        </button>
+                    </form>
+                </div>
+                <div class="nav-links">
+                    <a href="@Url.Action("Index", "Customer")" class="nav-link">Home</a>
+                    <a href="@Url.Action("ViewProducts", "Customer")" class="nav-link">Products</a>
+                    <a href="@Url.Action("Feedback", "Customer")" class="nav-link">Contact</a>
+                    <ul class="nav">
+                        <li class="nav-item mx">
+                            <a class="btn mx-3" href="@Url.Action("Login", "Admin")">Admin</a>
+                        </li>
+                        @if (string.IsNullOrEmpty(ViewBag.checkSession))
+                        {
+                            <li class="nav-item mx">
+                                <a class="btn mx-3" href="@Url.Action("Login", "Customer")">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn mx-3" href="@Url.Action("Register", "Customer")">Signup</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item mx">
+                                <a class="btn mx-3" href="@Url.Action("Logout", "Customer")">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn mx-3" href="@Url.Action("CustomerProfile", "Customer")">Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn mx-3" href="@Url.Action("fetchCart", "Customer", new { id = int.Parse(ViewBag.checkSession) })">Cart</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="footer">
+        <div class="mt-3">
+        <div class="row app" style="color:white;">
+            <div class="col">
+                <h2>Customer Care</h2>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">How to Buy</a></li>
+                    <li><a href="#">Daraz Shop</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2>Make Money with us</h2>
+                <ul>
+                    <li><a href="#">Daraz University</a></li>
+                    <li><a href="#">Sell on Daraz</a></li>
+                    <li><a href="#">Join Daraz Affiliate Program</a></li>
+                </ul>
+            </div>
+        </div>    
+        <section class="details">
+            <div class="payment">
+                <h2>Payment Method</h2>
+                <div class="cards">
+                    <div class="button">
+                        <img src="~/WebApplication/images/home/Visa-Logo.png" alt="">
+                    </div>
+                    <div class="button">
+                        <img src="~/WebApplication/images/home/Mastercard-logo.svg.png" alt="">
+                    </div>
+                    <div class="button">
+                        <img src="~/WebApplication/images/home/easypaisa-logo.png" alt="">
+                    </div>
+                    <div class="button">
+                        <img src="~/WebApplication/images/home/jazz-cash-logo.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="international">
+                <h2>Daraz International</h2>
+                <div class="country">
+                    <div class="countryCard">
+                        <img src="~/WebApplication/images/home/pakistan-flag-logo.png" alt="">
+                    </div>
+                    <div class="countryCard">
+                        <img src="~/WebApplication/images/home/bangladesh-flag-logo.png" alt="">
+                    </div>
+                    <div class="countryCard">
+                        <img src="~/WebApplication/images/home/srilanka-flag-logo.jpg" alt="">
+                    </div>
+                    <div class="countryCard">
+                        <img src="~/WebApplication/images/home/china-flag-logo.png" alt="">
+                    </div>
+                    <div class="countryCard">
+                        <img src="~/WebApplication/images/home/myanmar-flag-logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="follow">
+                <h2>Follow Us On</h2>
+                <div class="socialMedia">
+                    <div class="socialMediaCard">
+                        <img src="~/WebApplication/images/home/facebook-logo.png" alt="">
+                    </div>
+                    <div class="socialMediaCard">
+                        <img src="~/WebApplication/images/home/twitter-logo.png" alt="">
+                    </div>
+                    <div class="socialMediaCard">
+                        <img src="~/WebApplication/images/home/instagram-logo.png" alt="">
+                    </div>
+                    <div class="socialMediaCard">
+                        <img src="~/WebApplication/images/home/youtube-logo.png" alt="">
+                    </div>
+                    <div class="socialMediaCard">
+                        <img src="~/WebApplication/images/home/linkedIn-logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="verified">
+                <h2>Verified By</h2>
+                <img src="~/WebApplication/images/home/pcj-logo.png" alt="">
+            </div>
+        </section>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿@model List<Category>
+<div class="container-fluid px-4 mb-3">
+    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">Customer List</h2>
+</div>
+<a href="@Url.Action("AddCategory","Admin")" class="btn btn-primary">Add Category</a>
+<div class="row">
+    <div class="col-md-12">
+<table class="table table-bordered table-striped my-3">
+    <thead>
+        <tr>
+            <td>Category Id</td>
+            <td>Category Name</td>
+            <td>Options</td>
+        </tr>
+        <tbody>
+            @foreach(var cat in Model)
+            {
+        <tr>
+            <td>@cat.Id</td>
+            <td>@cat.category_Name</td>
+            <td>
+                <a href="@Url.Action("UpdateCategory","Admin",new{id=cat.Id})" class="btn btn-primary">Update</a>
+                <a href="@Url.Action("DeleteCategory","Admin",new{id=cat.Id})" class="btn btn-danger"
+                       onclick="return confirm('Proceed with deletion?');">Delete</a>
+            </td>
+        </tr>
+            }
+        </tbody>
+    </thead>
+</table>
+</div>
+</div>

@@ -1,0 +1,43 @@
+﻿@model Customer
+
+<div class="container-fluid px-4 mb-3">
+    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">Update Customer</h2>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="text" name="Name" class="form-control my-3" value="@Model.Name" />
+            <input type="text" name="Email" class="form-control my-3" value="@Model.Email" />
+            <input type="text" name="Password" class="form-control my-3" value="@Model.Password" />
+            <input type="text" name="Phone" class="form-control my-3" value="@Model.Phone" />
+            <input type="text" name="Address" class="form-control my-3" value="@Model.Address" />
+            <input type="text" name="Country" class="form-control my-3" value="@Model.Country" />
+            <input type="text" name="City" class="form-control my-3" value="@Model.City" />
+            <input type="text" name="Gender" class="form-control my-3" value="@Model.Gender" />
+
+            <div class="mb-3">
+                <label>Current Image</label>
+                <div>
+                    @if (!string.IsNullOrEmpty(Model.Image))
+                    {
+                        <img src="@Url.Content("~/customer_image/" + Model.Image)" height="100px" width="100px" />
+                    }
+                    else
+                    {
+                        <p>No image available</p>
+                    }/
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>Upload New Image</label>
+                <input type="file" name="Image" class="form-control" />
+                <input type="hidden" name="ExistingImage" value="@Model.Image" />
+            </div>
+            <input type="submit" class="btn btn-primary" value="Update Customer" />
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>

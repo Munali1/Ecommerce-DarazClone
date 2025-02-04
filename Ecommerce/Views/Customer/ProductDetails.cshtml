@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Product Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Product
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container mt-3 mb-3">
+    <div class="row mt-3">
+        <div class="col-md-5">
+            <img src="@Url.Content("~/product_image/" + Model.Image)" asp-append-version="true" class="img-fluid" alt="@Model.Name" />
+        </div>
+        <div class="col-md-7">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Product Id:</strong> @Model.Id</li>
+                <li class="list-group-item"><strong>Product Name:</strong> @Model.Name</li>
+                <li class="list-group-item"><strong>Product Price:</strong> $@Model.Price</li>
+                <li class="list-group-item"><strong>Product Description:</strong> @Model.Description</li>
+                <li class="list-group-item"><strong>Product Category:</strong> @(Model.category != null ? Model.category.category_Name : "N/A")</li>
+            </ul>
+            <div class="card-footer d-flex justify-content-between">
+                <a href="@Url.Action("AddToCart","Customer",new{id=Model.Id})" class="btn btn-primary">Add to Cart</a>
+                <a href="/buy/@Model.Id" class="btn btn-primary">Buy Now</a>
+
+            </div>
+        </div>
+    </div>
+</div>

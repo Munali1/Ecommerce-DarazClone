@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Cart>
+@{
+    ViewData["Title"] = "fetchCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container mt-3">
+    <h2>Cart Details</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Cart Id</th>
+                        <th>Product Name</th>
+                        <th>Product Quantity</th>
+                        <th>Product Price</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cart in Model)
+                    {
+                        <tr>
+                            <td>@cart.Id</td>
+                            <td>@cart.Products.Name</td>
+                            <td>@cart.Quantity</td>
+                            <td>@cart.Products.Price</td>
+                            <td>
+                                <a href="@Url.Action("removeProduct","customer",new{id=@cart.Id})" onclick="return confirm(`Proceed with Deletion?`);" class="btn btn-danger">
+                                    Delete
+                                </a>
+                                <a href="@Url.Action("Checkout","customer",new{id=@cart.Id})" onclick="return confirm(`Proceed with Checkout?`);" class="btn btn-primary">
+                                    Checkout
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

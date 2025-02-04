@@ -1,0 +1,29 @@
+﻿@model Ecommerce.Models.Customer
+
+<div class="container-fluid px-4 mb-3">
+    <h2 class="mt-4 text-center text-uppercase" style="letter-spacing:4px">Customer Details</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <img class="my-3" src="@Url.Content("~/customer_image/" + Model.Image)" asp-append-version="true" height="250px" width="250px" />
+        <ul class="list-group">
+            <li class="list-group-item">Customer Id: @Model.Id</li>
+            <li class="list-group-item">Customer Name: @Model.Name</li>
+            <li class="list-group-item">Customer Phone: @Model.Phone</li>
+            <li class="list-group-item">Customer Email: @Model.Email</li>
+            <li class="list-group-item">Customer Password: @Model.Password</li>
+            <li class="list-group-item">Customer Address: @Model.Address</li>
+            <li class="list-group-item">Customer Country: @Model.Country</li>
+            <li class="list-group-item">Customer City: @Model.City</li>
+            <li class="list-group-item">Customer Gender: @Model.Gender</li>
+        </ul>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+<div>
+    <a asp-action="UpdateCustomer" asp-route-id="@Model.Id" asp-controller="Admin" class="btn btn-primary">Edit</a> |
+    <a asp-action="FetchCustomer" asp-controller="Admin" class="btn btn-primary">Back to List</a>
+</div>
